@@ -64,7 +64,7 @@ function MorseCode(){
                 }
             })
         
-        return results;
+        return results.trim();
     }
 
     function morseToText(txtMorse){
