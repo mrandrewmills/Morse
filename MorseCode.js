@@ -54,7 +54,7 @@ function MorseCode(){
         txtPlain
             .toUpperCase()
             .split('')
-            .map( character => {
+            .forEach( character => {
                 if ( character === ' ' ) {
                     results += '   ';
                 }
