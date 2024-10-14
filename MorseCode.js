@@ -68,18 +68,18 @@ function MorseCode(){
     }
 
     function morseToText(txtMorse){
-        let results = '';
 
-        txtMorse
+        return txtMorse
             .split(' ')
             .map( character => {
                 if ( reverseMorseMap[ character ] !== undefined )
-                    results += reverseMorseMap[ character ];
+                    return reverseMorseMap[ character ];
                 else 
-                    results += ' ';
-            });
-        
-        return results.replaceAll('   ', ' ');
+                    return ' ';
+            })
+            .join('')
+            .replaceAll('   ', ' ')
+            .trim();
     }
     
     return {
